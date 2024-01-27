@@ -1,11 +1,11 @@
 variable "region" {
   description = "Region to deploy the project"
-  default     = "us-east-1"
+  default     = "us-west-2"
 }
 
 variable "ami" {
   description = "Ubuntu image to deploy the project"
-  default     = "ami-04ab94c703fb30101"
+  default     = "ami-073ff6027d02b1312"
 }
 
 variable "instance_type" {
@@ -31,13 +31,13 @@ variable "ingress_rule" {
       from_port   = 443
       to_port     = 443
       protocol    = "tcp"
-      cidr_blocks = ["116.30.20.50/32"]
+      cidr_blocks = ["0.0.0.0/0"]
     },
     {
       from_port   = 80
       to_port     = 80
       protocol    = "tcp"
-      cidr_blocks = ["116.30.20.50/32"]
+      cidr_blocks = ["0.0.0.0/0"]
     }
   ]
 }
