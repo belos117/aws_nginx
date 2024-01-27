@@ -9,8 +9,8 @@ variable "ami" {
 }
 
 variable "instance_type" {
-    description = "Instance type to deploy the project"
-    default = "t2.micro"
+  description = "Instance type to deploy the project"
+  default     = "t2.micro"
 }
 variable "server_name" {
   description = "Server Name on tag"
