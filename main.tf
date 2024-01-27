@@ -3,7 +3,7 @@ resource "aws_instance" "nginx_server" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "My Nginx Server"
+    Name = var.server_name
   }
   user_data = <<EOF
 #!/bin/bash
@@ -17,16 +17,14 @@ sudo apt install nginx
 #Configure firewall
 sudo ufw allow 'Nginx HTTP'
 
+#Check server status
 systemctl status nginx
 
+#Start Nginx server
 sudo nginx 
-
 
 EOF
 
 }
-output "instances" {
-  value       = "${aws_instance.nginx_server.*.private_ip}"
-  description = "PrivateIP address details"
-}
+
 
