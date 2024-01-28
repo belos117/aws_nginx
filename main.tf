@@ -5,27 +5,7 @@ resource "aws_instance" "nginx_server" {
   tags = {
     Name = var.server_name
   }
-
-  user_data = <<EOF
-#!/bin/bash
-
-sudo apt update
-sudo apt upgrade
-
-#Install Nginx
-sudo apt install nginx
-
-#Configure firewall
-sudo ufw allow 'Nginx HTTP'
-
-#Check server status
-systemctl status nginx
-
-#Start Nginx server
-sudo nginx 
-
-EOF
-
+  user_data = file("userdata.tpl")
 }
 
 resource "aws_security_group" "allow_tls" {

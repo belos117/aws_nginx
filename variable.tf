@@ -45,5 +45,5 @@ variable "ingress_rule" {
 variable "security_group_tag" {
   description = "Security Group Tag"
   type        = string
-  default     = "manual"
+  default     = "allow_tls"
 } 
