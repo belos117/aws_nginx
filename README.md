@@ -30,7 +30,7 @@ No modules.
 | <a name="input_instance_type"></a> [instance\_type](#input\_instance\_type) | Instance type to deploy the project | `string` | `"t2.micro"` | no |
 | <a name="input_region"></a> [region](#input\_region) | Region to deploy the project | `string` | `"us-west-2"` | no |
 | <a name="input_security_group_name"></a> [security\_group\_name](#input\_security\_group\_name) | Allow TLS inbound traffic | `string` | `"allow_tls"` | no |
-| <a name="input_security_group_tag"></a> [security\_group\_tag](#input\_security\_group\_tag) | Security Group Tag | `string` | `"manual"` | no |
+| <a name="input_security_group_tag"></a> [security\_group\_tag](#input\_security\_group\_tag) | Security Group Tag | `string` | `"allow_tls"` | no |
 | <a name="input_server_name"></a> [server\_name](#input\_server\_name) | Server Name on tag | `string` | `"My Nginx Server"` | no |
 
 ## Outputs
@@ -38,4 +38,4 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_instances"></a> [instances](#output\_instances) | PrivateIP address details |
-| <a name="output_public_ip"></a> [public\_ip](#output\_public\_ip) | The public IP address assigned to the instance, if applicable. NOTE: If you are using an aws\_eip with your instance, you should refer to the EIP's address directly and not use `public_ip` as this field will change after the EIP is attached |
+| <a name="output_public_ip"></a> [public\_ip](#output\_public\_ip) | The public IP address assigned to the instance |
