@@ -1,19 +1,23 @@
 variable "region" {
   description = "Region to deploy the project"
+  type        = string
   default     = "us-west-2"
 }
 
 variable "ami" {
   description = "Ubuntu image to deploy the project"
+  type        = string
   default     = "ami-073ff6027d02b1312"
 }
 
 variable "instance_type" {
   description = "Instance type to deploy the project"
+  type        = string
   default     = "t2.micro"
 }
 variable "server_name" {
   description = "Server Name on tag"
+  type        = string
   default     = "My Nginx Server"
 }
 
